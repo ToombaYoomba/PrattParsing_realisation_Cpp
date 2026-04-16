@@ -91,5 +91,16 @@ public:
         delete node;
     }
 
+    void printTree(Node* node, string prefix = "") {
+        if (node != nullptr){
+
+            cout << prefix;
+            cout << node->value << endl;    
+
+            printTree(node->left, prefix + "    ");
+            printTree(node->right, prefix + "    ");
+        }
+    }
+
     
 };
